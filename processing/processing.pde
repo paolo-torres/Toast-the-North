@@ -49,7 +49,7 @@ public class StringLoader extends Thread{
  }
  
  public void run() {
- String textFileLines[]=loadStrings("C:/School/University/Projects/Toast-the-North");
+ String textFileLines[]=loadStrings("C:/School/University/Projects/Toast-the-North/mySensorData.txt");
  String lineItems[]=splitTokens(textFileLines[0], ",");
  numItems=lineItems.length;
  for(int i = counter; i<numItems; i++){
