@@ -1,8 +1,9 @@
 from Tkinter import *
+import os
 
 # Set number of rows and columns
-ROWS = 12
-COLS = 12
+ROWS = 10
+COLS = 10
 
 # Create a grid of None to store the references to the tiles
 tiles = [[None for _ in range(COLS)] for _ in range(ROWS)]
@@ -36,6 +37,8 @@ def save():
 	with open('output.txt', 'a') as f:
 		f.truncate()
 		f.write(text)
+		f.seek(-1, os.SEEK_END)
+		f.truncate()
 
 # Create the window, a canvas and the mouse click event binding
 root = Tk()

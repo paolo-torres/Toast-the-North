@@ -1,6 +1,3 @@
-/* TextFile Sender: Written by Scott C on 5th April 2013
- using Processing Version 2.0b8 */
-
 import processing.serial.*;
 
 Serial comPort;
@@ -49,7 +46,7 @@ public class StringLoader extends Thread{
  }
  
  public void run() {
- String textFileLines[]=loadStrings("C:/Users/Jeremie/Toast-the-North/output.txt");
+ String textFileLines[]=loadStrings("C:/School/University/Projects/Toast-the-North/output.txt");
  String lineItems[]=splitTokens(textFileLines[0], ",");
  numItems=lineItems.length;
  for(int i = counter; i<numItems; i++){
