@@ -12,11 +12,17 @@ void setup() {
  pinMode(8, OUTPUT);
  pinMode(9, OUTPUT);
  pinMode(10, OUTPUT);
+ pinMode(11, OUTPUT);
+ pinMode(12, OUTPUT);
+ pinMode(13, OUTPUT);
 // Turn the Serial Protocol ON
  Serial.begin(9600);
 }
 
+
 void loop() {
+
+for(int rows = 1; rows <= 12; rows++){
  byte byteRead;
 
  /* check if data has been sent from the computer: */
@@ -26,6 +32,7 @@ void loop() {
  byteRead = Serial.read();
  //You have to subtract '0' from the read Byte to convert from text to a number.
  byteRead=byteRead-'0';
+ Serial.print(byteRead);
  
  //Turn off all LEDs if the byte Read = 0
  if(byteRead==0){
@@ -39,6 +46,9 @@ void loop() {
  digitalWrite(8, LOW);
  digitalWrite(9, LOW);
  digitalWrite(10, LOW);
+ digitalWrite(11, LOW);
+ digitalWrite(12, LOW);
+ digitalWrite(13, LOW);
  }
  
  //Turn LED ON depending on the byte Read.
@@ -47,3 +57,5 @@ void loop() {
  }
  }
  }
+ }
+ 
