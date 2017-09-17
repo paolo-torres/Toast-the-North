@@ -46,13 +46,13 @@ public class StringLoader extends Thread{
  }
  
  public void run() {
- String textFileLines[]=loadStrings("C:/School/University/Projects/Toast-the-North/output.txt");
+ String textFileLines[]=loadStrings("C:/Users/Jeremie/Toast-the-North/output.txt");
  String lineItems[]=splitTokens(textFileLines[0], ",");
  numItems=lineItems.length;
- for(int i = counter; i<numItems; i++){
+ for(int i = counter; i < numItems; i++){
  comPort.write(lineItems[i]);
+ print(lineItems[i]);
  delay(500);
- comPort.write("0");
  }
  counter=numItems;
  }

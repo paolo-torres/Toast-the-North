@@ -2,8 +2,8 @@ from Tkinter import *
 import os
 
 # Set number of rows and columns
-ROWS = 10
-COLS = 10
+ROWS = 12
+COLS = 12
 
 # Create a grid of None to store the references to the tiles
 tiles = [[None for _ in range(COLS)] for _ in range(ROWS)]
