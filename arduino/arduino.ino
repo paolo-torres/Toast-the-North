@@ -30,21 +30,19 @@ void loop() {
     if (byteRead == 0) {
       // turn off pinNumber
       digitalWrite(pinNumber, LOW);
-    }
-    // pin on if the byteRead = 1
-    else {
+    } else { // pin on if the byteRead = 1
       digitalWrite(pinNumber, HIGH);
       delay(2000);
       digitalWrite(pinNumber, LOW);
     }
-   if (pinNumber == 13){
-     delay(5000);
-     //turn off all lights
-     for(pinNumber; pinNumber > 1; pinNumber--){
-       digitalWrite(pinNumber, LOW);
-     }
-     pinNumber = 1;
-   }
-   pinNumber++;
+    if (pinNumber == 13) {
+      delay(5000);
+      // turn off all lights
+      for(pinNumber; pinNumber > 1; pinNumber--) {
+        digitalWrite(pinNumber, LOW);
+      }
+      pinNumber = 1;
+    }
+    pinNumber++;
   }
 }
