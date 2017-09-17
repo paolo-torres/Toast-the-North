@@ -34,6 +34,8 @@ void loop() {
     // pin on if the byteRead = 1
     else {
       digitalWrite(pinNumber, HIGH);
+      delay(2000);
+      digitalWrite(pinNumber, LOW);
     }
    if (pinNumber == 13){
      delay(5000);
